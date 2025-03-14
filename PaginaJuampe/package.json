@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://mbarrera203.github.io/abogadoJuanPedroNegri/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,9 +25,9 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.55.0",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "vite": "^5.0.8",
-    "gh-pages": "^6.1.1"
+    "vite": "^5.0.8"
   }
 }
