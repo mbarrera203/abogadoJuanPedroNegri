@@ -7,10 +7,25 @@ const Navbar = () => {
     <nav className="bg-white text-gray-800 fixed w-full z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-              Abogado Martinez
-            </span>
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0">
+              <div className="relative w-12 h-12 md:w-14 md:h-14">
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full opacity-70 blur"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=500"
+                  alt="Logo"
+                  className="relative w-full h-full rounded-full object-cover border-2 border-gray-200"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
+                Abogado Martinez
+              </span>
+              <span className="text-sm text-gray-500 hidden md:block">
+                Derecho Civil y Penal
+              </span>
+            </div>
           </div>
           
           {/* Desktop Menu */}

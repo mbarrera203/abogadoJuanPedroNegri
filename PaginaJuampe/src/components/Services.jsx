@@ -3,19 +3,19 @@ import { motion } from 'framer-motion';
 
 const ServiceCard = ({ title, description, image }) => (
   <motion.div 
-    className="flex-shrink-0 w-72 m-3 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 snap-center pointer-events-none"
+    className="flex-shrink-0 w-[280px] sm:w-72 mx-2 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 snap-center pointer-events-none"
     whileHover={{ y: -5 }}
     tabIndex="-1"
   >
     <img 
       src={image || "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=500"} 
       alt={title} 
-      className="w-full h-48 object-cover select-none pointer-events-none"
+      className="w-full h-40 sm:h-48 object-cover select-none pointer-events-none"
       draggable="false"
     />
-    <div className="p-6 pointer-events-none">
-      <h3 className="text-xl font-semibold mb-3 text-gray-800">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="p-4 sm:p-6 pointer-events-none">
+      <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-800">{title}</h3>
+      <p className="text-sm sm:text-base text-gray-600">{description}</p>
     </div>
   </motion.div>
 );
@@ -45,12 +45,12 @@ const ServiceSlider = ({ services }) => {
 
   return (
     <div 
-      className="relative bg-white rounded-xl shadow-lg p-6 overflow-hidden"
+      className="relative bg-white rounded-xl shadow-lg p-4 sm:p-6 overflow-hidden"
       tabIndex="-1"
     >
       <div 
         ref={containerRef} 
-        className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide select-none"
+        className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide select-none -mx-2"
         style={{
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
@@ -116,20 +116,20 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-16 sm:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-800">
           Nuestros Servicios
         </h2>
         
-        <div className="space-y-12">
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-semibold mb-8 text-gray-800">Derecho Penal</h3>
+        <div className="space-y-8 sm:space-y-12">
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-gray-800">Derecho Penal</h3>
             <ServiceSlider services={penalServices} />
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-semibold mb-8 text-gray-800">Derecho Civil</h3>
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-gray-800">Derecho Civil</h3>
             <ServiceSlider services={civilServices} />
           </div>
         </div>
