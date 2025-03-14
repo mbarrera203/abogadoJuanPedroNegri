@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/abogadoJuanPedroNegri/', // Reemplaza con el nombre de tu repositorio
+  base: '/abogadoJuanPedroNegri/', // Debe coincidir EXACTAMENTE con el nombre de tu repositorio
 })
