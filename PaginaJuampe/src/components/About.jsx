@@ -28,7 +28,7 @@ const About = () => {
             <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
               <FaBalanceScale className="text-gray-700 text-2xl md:text-3xl" />
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                Dr. Juan Martinez
+                Dr. Juan Pedro Negri
               </h2>
             </div>
 

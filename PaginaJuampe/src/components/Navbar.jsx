@@ -20,7 +20,7 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                Abogado Martinez
+                Abogado Negri
               </span>
               <span className="text-sm text-gray-500 hidden md:block">
                 Derecho Civil y Penal
@@ -56,24 +56,26 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute w-full bg-white border-t border-gray-100 shadow-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <a href="#about" 
-              className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md transition-colors">
-              Quién Soy
-            </a>
-            <a href="#services" 
-              className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md transition-colors">
-              Servicios
-            </a>
-            <a href="#contact" 
-              className="block bg-gray-800 text-white hover:bg-gray-700 px-3 py-2 rounded-md transition-colors">
-              Contacto
-            </a>
-          </div>
+      <div 
+        className={`md:hidden absolute w-full bg-white border-t border-gray-100 shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1">
+          <a href="#about" 
+            className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md transition-colors">
+            Quién Soy
+          </a>
+          <a href="#services" 
+            className="block text-gray-600 hover:text-gray-900 hover:bg-gray-50 px-3 py-2 rounded-md transition-colors">
+            Servicios
+          </a>
+          <a href="#contact" 
+            className="block bg-gray-800 text-white hover:bg-gray-700 px-3 py-2 rounded-md transition-colors">
+            Contacto
+          </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

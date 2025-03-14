@@ -3,14 +3,21 @@ import { motion } from 'framer-motion';
 
 const ServiceCard = ({ title, description, image }) => (
   <motion.div 
-    className="flex-shrink-0 w-[280px] sm:w-72 mx-2 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 snap-center pointer-events-none"
-    whileHover={{ y: -5 }}
+    className="flex-shrink-0 w-[280px] sm:w-72 mx-2 bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-500 ease-in-out snap-center pointer-events-none"
+    whileHover={{ 
+      y: -10,
+      scale: 1.02,
+      transition: { duration: 0.3, ease: "easeOut" }
+    }}
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
     tabIndex="-1"
   >
     <img 
       src={image || "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=500"} 
       alt={title} 
-      className="w-full h-40 sm:h-48 object-cover select-none pointer-events-none"
+      className="w-full h-40 sm:h-48 object-cover select-none pointer-events-none transform transition-transform duration-500 ease-in-out hover:scale-105"
       draggable="false"
     />
     <div className="p-4 sm:p-6 pointer-events-none">
